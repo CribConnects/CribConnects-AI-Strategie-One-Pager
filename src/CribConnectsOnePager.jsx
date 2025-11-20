@@ -152,7 +152,7 @@ export default function CribConnectsOnePager() {
                   </div>
                   <div className="flex-1">
                     <div className="text-lg font-semibold text-gray-900 sans mb-2">Mensgerichte Implementatie</div>
-                    <div className="text-base text-gray-600 sans font-light leading-relaxed">We focussen op het individu en maken werk leuker, niet moeilijker. Het gaat om mensen, niet om technologie.</div>
+                    <div className="text-base text-gray-600 sans font-light leading-relaxed">We focussen op het <strong className="font-medium">individu</strong> en maken werk <strong className="font-medium">leuker, niet moeilijker</strong>. Het gaat om <strong className="font-medium">mensen</strong>, niet om technologie.</div>
                   </div>
                 </div>
 
@@ -162,7 +162,7 @@ export default function CribConnectsOnePager() {
                   </div>
                   <div className="flex-1">
                     <div className="text-lg font-semibold text-gray-900 sans mb-2">Praktische Coaching</div>
-                    <div className="text-base text-gray-600 sans font-light leading-relaxed">Begeleiding op de werkvloer, niet vanuit theorie maar vanuit praktijk. We gaan mee in jullie dagelijkse werk.</div>
+                    <div className="text-base text-gray-600 sans font-light leading-relaxed">Begeleiding <strong className="font-medium">op de werkvloer</strong>, niet vanuit theorie maar vanuit <strong className="font-medium">praktijk</strong>. We gaan mee in jullie <strong className="font-medium">dagelijkse werk</strong>.</div>
                   </div>
                 </div>
 
@@ -172,7 +172,7 @@ export default function CribConnectsOnePager() {
                   </div>
                   <div className="flex-1">
                     <div className="text-lg font-semibold text-gray-900 sans mb-2">Meetbare Resultaten</div>
-                    <div className="text-base text-gray-600 sans font-light leading-relaxed">Agents worden KPI's, we vieren successen en optimaliseren continu. Concrete resultaten, geen vage beloftes.</div>
+                    <div className="text-base text-gray-600 sans font-light leading-relaxed">Agents worden <strong className="font-medium">KPI's</strong>, we <strong className="font-medium">vieren successen</strong> en optimaliseren continu. <strong className="font-medium">Concrete resultaten</strong>, geen vage beloftes.</div>
                   </div>
                 </div>
               </div>
@@ -200,21 +200,21 @@ export default function CribConnectsOnePager() {
                 icon: <DollarSign className="w-8 h-8" style={{ color: '#66C5D6' }} />,
                 title: "Software Inkopen",
                 desc: "Bedrijven investeren flink in AI-tools en licenties",
-                detail: "Organisaties schaffen AI-platforms aan met hoge verwachtingen, maar zonder concrete strategie voor daadwerkelijk gebruik. De focus ligt op het hebben van de technologie, niet op de implementatie ervan."
+                detail: "Organisaties schaffen AI-platforms aan met <strong className='font-medium'>hoge verwachtingen</strong>, maar <strong className='font-medium'>zonder concrete strategie</strong> voor daadwerkelijk gebruik. De focus ligt op het <strong className='font-medium'>hebben van de technologie</strong>, niet op de <strong className='font-medium'>implementatie</strong> ervan."
               },
               {
                 id: 'problem2',
                 icon: <Wrench className="w-8 h-8" style={{ color: '#66C5D6' }} />,
                 title: "Zelf Bouwen",
                 desc: "Teams ontwikkelen eigen AI-oplossingen",
-                detail: "Custom oplossingen kosten maanden aan ontwikkeltijd, vereisen specialistische kennis, en moeten constant ge-update worden. Dit bindt kostbare resources die beter gebruikt kunnen worden."
+                detail: "Custom oplossingen kosten <strong className='font-medium'>maanden aan ontwikkeltijd</strong>, vereisen <strong className='font-medium'>specialistische kennis</strong>, en moeten <strong className='font-medium'>constant ge-update</strong> worden. Dit bindt <strong className='font-medium'>kostbare resources</strong> die beter gebruikt kunnen worden."
               },
               {
                 id: 'problem3',
                 icon: <Key className="w-8 h-8" style={{ color: '#66C5D6' }} />,
                 title: "Licenties Toekennen",
                 desc: "Toegang wordt verstrekt aan medewerkers",
-                detail: "Accounts worden aangemaakt en uitgedeeld, maar zonder adequate training, duidelijke use cases en ondersteuning blijven de tools grotendeels ongebruikt. Het eindresultaat: dure software die niemand gebruikt."
+                detail: "Accounts worden aangemaakt en uitgedeeld, maar <strong className='font-medium'>zonder adequate training</strong>, duidelijke use cases en ondersteuning blijven de tools grotendeels <strong className='font-medium'>ongebruikt</strong>. Het eindresultaat: <strong className='font-medium'>dure software die niemand gebruikt</strong>."
               }
             ].map((item) => (
               <button
@@ -292,7 +292,7 @@ export default function CribConnectsOnePager() {
                 expanded.strategy1 ? 'max-h-[500px]' : 'max-h-24'
               }`}>
                 <p className="text-sm text-gray-700 sans font-light mb-5 leading-relaxed">
-                  Wij zien AI niet zomaar als een tool, maar als een <strong className="font-semibold">strategische kans</strong> om je organisatie fundamenteel te verbeteren. Het gaat niet om technologie, maar om <strong className="font-semibold">mensen en cultuur</strong>.
+                  Wij zien <strong className="font-semibold">AI</strong> niet zomaar als een tool, maar als een <strong className="font-semibold">strategische kans</strong> om je <strong className="font-semibold">organisatie</strong> fundamenteel te verbeteren. Het gaat niet om <strong className="font-semibold">technologie</strong>, maar om <strong className="font-semibold">mensen en cultuur</strong>.
                 </p>
                 <ul className="space-y-3 text-sm text-gray-700 sans">
                   <li className="flex items-start gap-3">
@@ -335,7 +335,7 @@ export default function CribConnectsOnePager() {
                 expanded.strategy2 ? 'max-h-[500px]' : 'max-h-24'
               }`}>
                 <p className="text-sm text-gray-700 sans font-light mb-5 leading-relaxed">
-                  We benaderen AI vanuit het <strong className="font-semibold">menselijk perspectief</strong>: hoe kan AI het werk van individuele medewerkers <strong className="font-semibold">leuker en betekenisvoller</strong> maken?
+                  We benaderen <strong className="font-semibold">AI</strong> vanuit het <strong className="font-semibold">menselijk perspectief</strong>: hoe kan AI het <strong className="font-semibold">werk</strong> van individuele medewerkers <strong className="font-semibold">leuker en betekenisvoller</strong> maken?
                 </p>
                 <ul className="space-y-3 text-sm text-gray-700 sans">
                   <li className="flex items-start gap-3">
@@ -421,7 +421,7 @@ export default function CribConnectsOnePager() {
               }`}>
                 <div className="pt-5 border-t border-cyan-100">
                   <p className="text-sm text-gray-700 sans font-light mb-5 leading-relaxed">
-                    Google Gemini is een van de beste AI-modellen op de markt en integreert in het Google Workspace ecosysteem.
+                    <strong className="font-semibold">Google Gemini</strong> is een van de <strong className="font-semibold">beste AI-modellen</strong> op de markt en integreert naadloos in het <strong className="font-semibold">Google Workspace ecosysteem</strong>.
                   </p>
                   <ul className="space-y-3 text-sm text-gray-700 sans">
                     <li className="flex items-start gap-3">
@@ -473,7 +473,7 @@ export default function CribConnectsOnePager() {
               }`}>
                 <div className="pt-5 border-t border-cyan-100">
                   <p className="text-sm text-gray-700 sans font-light mb-5 leading-relaxed">
-                    Microsoft Copilot maakt gebruik van zowel Claude als ChatGPT modellen en is geïntegreerd in het Microsoft 365 ecosysteem.
+                    <strong className="font-semibold">Microsoft Copilot</strong> maakt gebruik van zowel <strong className="font-semibold">Claude als ChatGPT modellen</strong> en is volledig geïntegreerd in het <strong className="font-semibold">Microsoft 365 ecosysteem</strong>.
                   </p>
                   <ul className="space-y-3 text-sm text-gray-700 sans">
                     <li className="flex items-start gap-3">
@@ -505,32 +505,32 @@ export default function CribConnectsOnePager() {
 
           <div className="glass-strong rounded-2xl p-10 border border-cyan-200/50 shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 sans mb-8 text-center">Waarom Deze Platforms?</h3>
-            <div className="space-y-6">
-              <div className="flex items-start gap-5">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
+            <div className="space-y-8">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md mb-4" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
                   <Target className="w-7 h-7" style={{ color: '#66C5D6' }} />
                 </div>
-                <div className="flex-1">
+                <div className="max-w-2xl">
                   <div className="text-lg font-semibold text-gray-900 sans mb-2">Geen Custom Development</div>
-                  <div className="text-base text-gray-600 sans font-light leading-relaxed">Dan hoef je niet software te maken die je zelf moet onderhouden, updaten en beveiligen. Focus op adoptie, niet op technologie.</div>
+                  <div className="text-base text-gray-600 sans font-light leading-relaxed">Dan hoef je <strong className="font-medium">niet software te maken</strong> die je zelf moet <strong className="font-medium">onderhouden, updaten en beveiligen</strong>. Focus op <strong className="font-medium">adoptie</strong>, niet op technologie.</div>
                 </div>
               </div>
-              <div className="flex items-start gap-5">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md mb-4" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
                   <CheckCircle className="w-7 h-7" style={{ color: '#66C5D6' }} />
                 </div>
-                <div className="flex-1">
+                <div className="max-w-2xl">
                   <div className="text-lg font-semibold text-gray-900 sans mb-2">Volledig Compliant</div>
-                  <div className="text-base text-gray-600 sans font-light leading-relaxed">Beide platforms voldoen aan AVG, NIS2, DORA en andere relevante wetgeving. Enterprise-grade security out of the box.</div>
+                  <div className="text-base text-gray-600 sans font-light leading-relaxed">Beide platforms voldoen aan <strong className="font-medium">AVG, NIS2, DORA</strong> en andere relevante wetgeving. <strong className="font-medium">Enterprise-grade security</strong> out of the box.</div>
                 </div>
               </div>
-              <div className="flex items-start gap-5">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
+              <div className="flex flex-col items-center text-center">
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md mb-4" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
                   <Award className="w-7 h-7" style={{ color: '#66C5D6' }} />
                 </div>
-                <div className="flex-1">
+                <div className="max-w-2xl">
                   <div className="text-lg font-semibold text-gray-900 sans mb-2">Beste AI-modellen</div>
-                  <div className="text-base text-gray-600 sans font-light leading-relaxed">Google Gemini en Microsoft Copilot (Claude + GPT-4) zijn de krachtigste modellen beschikbaar vandaag.</div>
+                  <div className="text-base text-gray-600 sans font-light leading-relaxed"><strong className="font-medium">Google Gemini</strong> en <strong className="font-medium">Microsoft Copilot</strong> (Claude + GPT-4) zijn de <strong className="font-medium">krachtigste modellen</strong> beschikbaar vandaag.</div>
                 </div>
               </div>
             </div>
@@ -558,7 +558,7 @@ export default function CribConnectsOnePager() {
                 title: "Kick-off Workshop",
                 icon: <Sparkles className="w-7 h-7" />,
                 description: "Enthousiasmeren: wat kan AI en hoe",
-                details: "We starten met een inspirerende workshop waarin we de mogelijkheden van AI demonstreren. Geen theoretische verhalen, maar concrete voorbeelden relevant voor jullie organisatie. We laten zien hoe je agents bouwt, tonen quick wins en wekken interesse bij het hele team. Het doel: van sceptisch naar enthousiast in één sessie."
+                details: "We starten met een <strong className='font-medium'>inspirerende workshop</strong> waarin we de mogelijkheden van AI demonstreren. Geen theoretische verhalen, maar <strong className='font-medium'>concrete voorbeelden</strong> relevant voor jullie organisatie. We laten zien hoe je <strong className='font-medium'>agents bouwt</strong>, tonen quick wins en wekken interesse bij het hele team. Het doel: van <strong className='font-medium'>sceptisch naar enthousiast</strong> in één sessie."
               },
               {
                 id: 'step2',
@@ -566,7 +566,7 @@ export default function CribConnectsOnePager() {
                 title: "Hands-on Coaching",
                 icon: <Users className="w-7 h-7" />,
                 description: "Op de werkvloer met mensen meekijken, persoonlijke begeleiding",
-                details: "Dit is waar de magie gebeurt. We kijken letterlijk mee met mensen in hun dagelijkse werk. Welke taken zijn repetitief? Waar zitten frustraties? Wat kost onnodig veel tijd? Per persoon analyseren we de workflow en identificeren we AI-kansen. Dan begeleiden we hands-on bij de implementatie: van prompt engineering tot agent building. Real-time support voor échte uitdagingen."
+                details: "Dit is waar de <strong className='font-medium'>magie</strong> gebeurt. We kijken <strong className='font-medium'>letterlijk mee</strong> met mensen in hun dagelijkse werk. Welke taken zijn <strong className='font-medium'>repetitief</strong>? Waar zitten <strong className='font-medium'>frustraties</strong>? Wat kost onnodig veel tijd? Per persoon analyseren we de workflow en identificeren we <strong className='font-medium'>AI-kansen</strong>. Dan begeleiden we <strong className='font-medium'>hands-on</strong> bij de implementatie: van prompt engineering tot agent building. <strong className='font-medium'>Real-time support</strong> voor échte uitdagingen."
               },
               {
                 id: 'step3',
@@ -574,7 +574,7 @@ export default function CribConnectsOnePager() {
                 title: "Helpdesk & Agent Building",
                 icon: <MessageSquare className="w-7 h-7" />,
                 description: "Continue ondersteuning: een plek waar mensen vragen kunnen stellen",
-                details: "Na de intensieve coachingsfase blijven we beschikbaar. We richten een dedicated helpdesk in waar medewerkers terecht kunnen met vragen, problemen of nieuwe ideeën. Daarnaast bouwen we complexere agents op maat voor specifieke use cases die meer development vereisen. Denk aan agents die data uit meerdere systemen combineren of geautomatiseerde workflows."
+                details: "Na de intensieve coachingsfase blijven we <strong className='font-medium'>beschikbaar</strong>. We richten een <strong className='font-medium'>dedicated helpdesk</strong> in waar medewerkers terecht kunnen met vragen, problemen of nieuwe ideeën. Daarnaast bouwen we <strong className='font-medium'>complexere agents op maat</strong> voor specifieke use cases die meer development vereisen. Denk aan agents die data uit <strong className='font-medium'>meerdere systemen combineren</strong> of geautomatiseerde workflows."
               },
               {
                 id: 'step4',
@@ -582,7 +582,7 @@ export default function CribConnectsOnePager() {
                 title: "Success Tracking & Viering",
                 icon: <Award className="w-7 h-7" />,
                 description: "Agents in KPI's: meten, vieren en optimaliseren",
-                details: "We maken succes meetbaar door agents onderdeel van KPI's te maken. Hoeveel tijd bespaart agent X? Hoeveel processen zijn geautomatiseerd? We rapporteren kwartaalijs over adoptie en impact. Maar belangrijker: we vieren successen! Teams die hun agents effectief inzetten worden in de spotlight gezet. We leren van wat werkt en optimaliseren continu op basis van data."
+                details: "We maken succes <strong className='font-medium'>meetbaar</strong> door agents onderdeel van <strong className='font-medium'>KPI's</strong> te maken. Hoeveel tijd bespaart agent X? Hoeveel processen zijn geautomatiseerd? We rapporteren <strong className='font-medium'>kwartaalijs</strong> over adoptie en impact. Maar belangrijker: we <strong className='font-medium'>vieren successen</strong>! Teams die hun agents effectief inzetten worden in de <strong className='font-medium'>spotlight</strong> gezet. We leren van wat werkt en optimaliseren continu op basis van <strong className='font-medium'>data</strong>."
               }
             ].map((step) => (
               <button
@@ -630,8 +630,8 @@ export default function CribConnectsOnePager() {
               </div>
               <h3 className="text-3xl font-bold serif mb-4 text-gray-900">Klaar om te Beginnen?</h3>
               <p className="text-base font-light mb-8 text-gray-700 sans leading-relaxed">
-                Laten we samen jouw AI-transformatie realiseren.
-                Met praktische coaching en meetbare resultaten gaan we van licenties naar cultuurverandering.
+                Laten we samen jouw <strong className="font-medium">AI-transformatie</strong> realiseren.
+                Met <strong className="font-medium">praktische coaching</strong> en <strong className="font-medium">meetbare resultaten</strong> gaan we van licenties naar <strong className="font-medium">cultuurverandering</strong>.
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
                 <a href="mailto:info@cribconnects.com" className="flex items-center gap-3 text-gray-700 hover:text-gray-900 transition-all group">
