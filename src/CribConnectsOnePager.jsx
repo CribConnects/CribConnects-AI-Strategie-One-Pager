@@ -277,7 +277,7 @@ export default function CribConnectsOnePager() {
           </div>
 
           <div className="space-y-6 mb-10">
-            <div className="glass-strong border border-cyan-200/50 rounded-2xl p-8 shadow-lg">
+            <div className="glass-strong border border-cyan-200/50 rounded-2xl p-8 shadow-lg min-h-[280px] flex flex-col">
               <div className="flex justify-between items-start mb-5">
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center shadow-md" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
                   <Target className="w-7 h-7 text-white" />
@@ -320,7 +320,7 @@ export default function CribConnectsOnePager() {
               </div>
             </div>
 
-            <div className="glass-strong border border-cyan-200/50 rounded-2xl p-8 shadow-lg">
+            <div className="glass-strong border border-cyan-200/50 rounded-2xl p-8 shadow-lg min-h-[280px] flex flex-col">
               <div className="flex justify-between items-start mb-5">
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center shadow-md" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
                   <Users className="w-7 h-7 text-white" />
@@ -400,7 +400,7 @@ export default function CribConnectsOnePager() {
           <div className="space-y-5 mb-10">
             <button
               onClick={() => toggle('tool1')}
-              className="glass-strong border rounded-2xl p-8 hover:shadow-2xl transition-all text-left group"
+              className="w-full glass-strong border rounded-2xl p-8 hover:shadow-2xl transition-all text-left group min-h-[200px] flex flex-col"
               style={{ borderColor: expanded.tool1 ? '#4285F4' : 'rgba(136, 216, 232, 0.3)' }}
             >
               <div className="flex justify-between items-start mb-5">
@@ -452,7 +452,7 @@ export default function CribConnectsOnePager() {
 
             <button
               onClick={() => toggle('tool2')}
-              className="glass-strong border rounded-2xl p-8 hover:shadow-2xl transition-all text-left group"
+              className="w-full glass-strong border rounded-2xl p-8 hover:shadow-2xl transition-all text-left group min-h-[200px] flex flex-col"
               style={{ borderColor: expanded.tool2 ? '#7B68EE' : 'rgba(136, 216, 232, 0.3)' }}
             >
               <div className="flex justify-between items-start mb-5">
