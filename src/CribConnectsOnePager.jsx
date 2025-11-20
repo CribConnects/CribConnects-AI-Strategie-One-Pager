@@ -239,8 +239,7 @@ export default function CribConnectsOnePager() {
                 <div className={`overflow-hidden transition-all duration-300 ${
                   expanded[item.id] ? 'max-h-48 mt-5' : 'max-h-0'
                 }`}>
-                  <div className="pt-4 border-t border-cyan-100 text-sm text-gray-700 sans font-light leading-relaxed">
-                    {item.detail}
+                  <div className="pt-4 border-t border-cyan-100 text-sm text-gray-700 sans font-light leading-relaxed" dangerouslySetInnerHTML={{ __html: item.detail }}>
                   </div>
                 </div>
               </button>
@@ -662,8 +661,7 @@ export default function CribConnectsOnePager() {
                       expanded[step.id] ? 'max-h-96 mt-5' : 'max-h-0'
                     }`}>
                       <div className="pt-4 border-t border-cyan-100">
-                        <p className="text-sm text-gray-700 sans font-light leading-relaxed">
-                          {step.details}
+                        <p className="text-sm text-gray-700 sans font-light leading-relaxed" dangerouslySetInnerHTML={{ __html: step.details }}>
                         </p>
                       </div>
                     </div>
