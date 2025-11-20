@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Sparkles, Users, Target, Zap, CheckCircle, MessageSquare, Award, Plus, Minus, DollarSign, Wrench, Key, TrendingUp, Brain, Lightbulb, Rocket } from 'lucide-react';
+import { ChevronDown, Sparkles, Users, Target, Zap, CheckCircle, MessageSquare, Award, Plus, Minus, DollarSign, Wrench, Key, TrendingUp, Brain, Lightbulb, Rocket, Mail, Phone } from 'lucide-react';
 
 export default function CribConnectsOnePager() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -289,14 +289,14 @@ export default function CribConnectsOnePager() {
                     <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#66C5D6' }} />
                     <div>
                       <span className="font-semibold block mb-1">Cultuurverandering</span>
-                      <span className="font-light text-gray-600">Van weerstand naar enthousiasme — we maken AI onderdeel van jullie DNA</span>
+                      <span className="font-light text-gray-600">Van weerstand naar enthousiasme: we maken AI onderdeel van jullie DNA</span>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#66C5D6' }} />
                     <div>
                       <span className="font-semibold block mb-1">Mindset Verschuiving</span>
-                      <span className="font-light text-gray-600">Van "AI vervangt ons" naar "AI maakt ons beter" — een growth mindset creëren</span>
+                      <span className="font-light text-gray-600">Van "AI vervangt ons" naar "AI maakt ons beter": een growth mindset creëren</span>
                     </div>
                   </li>
                 </ul>
@@ -355,7 +355,7 @@ export default function CribConnectsOnePager() {
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-gray-900 sans mb-3">Hoe Doen We Dit?</h3>
                 <p className="text-base text-gray-700 sans font-light leading-relaxed mb-4">
-                  <strong className="font-semibold">Praktische coaching op de werkvloer</strong> — geen theoretische workshops of PowerPoints, maar echte begeleiding waar het gebeurt.
+                  <strong className="font-semibold">Praktische coaching op de werkvloer</strong>: geen theoretische workshops of PowerPoints, maar echte begeleiding waar het gebeurt.
                 </p>
                 <p className="text-sm text-gray-600 sans font-light leading-relaxed">
                   Wij spitten <strong className="font-medium">workflows van individuen</strong> uit, identificeren concrete AI-kansen en begeleiden hands-on bij implementatie.
@@ -375,7 +375,7 @@ export default function CribConnectsOnePager() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-4 text-gray-900 serif">Welke Tooling?</h2>
           <p className="text-lg text-gray-600 mb-10 sans font-light">
-            We zetten in op <strong className="font-semibold text-gray-900">Google Gemini</strong> of <strong className="font-semibold text-gray-900">Microsoft Copilot</strong> — enterprise-ready platforms met volledige compliance
+            We zetten in op <strong className="font-semibold text-gray-900">Google Gemini</strong> of <strong className="font-semibold text-gray-900">Microsoft Copilot</strong>: enterprise-ready platforms met volledige compliance
           </p>
 
           <div className="grid md:grid-cols-2 gap-5 mb-8">
@@ -526,7 +526,7 @@ export default function CribConnectsOnePager() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold mb-4 text-gray-900 serif">Onze Aanpak</h2>
           <p className="text-lg text-gray-600 mb-10 sans font-light">
-            <strong className="font-semibold text-gray-900">Custom-made</strong> implementatie in 4 fases — van enthousiasme naar resultaten
+            <strong className="font-semibold text-gray-900">Custom-made</strong> implementatie in 4 fases: van enthousiasme naar resultaten
           </p>
 
           <div className="space-y-4">
@@ -536,7 +536,7 @@ export default function CribConnectsOnePager() {
                 number: "01",
                 title: "Kick-off Workshop",
                 icon: <Sparkles className="w-7 h-7" />,
-                description: "Enthousiasmeren — wat kan AI en hoe",
+                description: "Enthousiasmeren: wat kan AI en hoe",
                 details: "We starten met een inspirerende workshop waarin we de mogelijkheden van AI demonstreren. Geen theoretische verhalen, maar concrete voorbeelden relevant voor jullie organisatie. We laten zien hoe je agents bouwt, tonen quick wins en wekken interesse bij het hele team. Het doel: van sceptisch naar enthousiast in één sessie."
               },
               {
@@ -544,15 +544,15 @@ export default function CribConnectsOnePager() {
                 number: "02",
                 title: "Hands-on Coaching",
                 icon: <Users className="w-7 h-7" />,
-                description: "Op de werkvloer met mensen meekijken — persoonlijke begeleiding",
-                details: "Dit is waar de magie gebeurt. We kijken letterlijk mee met mensen in hun dagelijkse werk. Welke taken zijn repetitief? Waar zitten frustraties? Wat kost onnodig veel tijd? Per persoon analyseren we de workflow en identificeren we AI-kansen. Dan begeleiden we hands-on bij de implementatie — van prompt engineering tot agent building. Real-time support voor échte uitdagingen."
+                description: "Op de werkvloer met mensen meekijken, persoonlijke begeleiding",
+                details: "Dit is waar de magie gebeurt. We kijken letterlijk mee met mensen in hun dagelijkse werk. Welke taken zijn repetitief? Waar zitten frustraties? Wat kost onnodig veel tijd? Per persoon analyseren we de workflow en identificeren we AI-kansen. Dan begeleiden we hands-on bij de implementatie: van prompt engineering tot agent building. Real-time support voor échte uitdagingen."
               },
               {
                 id: 'step3',
                 number: "03",
                 title: "Helpdesk & Agent Building",
                 icon: <MessageSquare className="w-7 h-7" />,
-                description: "Continue ondersteuning — een plek waar mensen vragen kunnen stellen",
+                description: "Continue ondersteuning: een plek waar mensen vragen kunnen stellen",
                 details: "Na de intensieve coachingsfase blijven we beschikbaar. We richten een dedicated helpdesk in waar medewerkers terecht kunnen met vragen, problemen of nieuwe ideeën. Daarnaast bouwen we complexere agents op maat voor specifieke use cases die meer development vereisen. Denk aan agents die data uit meerdere systemen combineren of geautomatiseerde workflows."
               },
               {
@@ -560,7 +560,7 @@ export default function CribConnectsOnePager() {
                 number: "04",
                 title: "Success Tracking & Viering",
                 icon: <Award className="w-7 h-7" />,
-                description: "Agents in KPI's — meten, vieren en optimaliseren",
+                description: "Agents in KPI's: meten, vieren en optimaliseren",
                 details: "We maken succes meetbaar door agents onderdeel van KPI's te maken. Hoeveel tijd bespaart agent X? Hoeveel processen zijn geautomatiseerd? We rapporteren kwartaalijs over adoptie en impact. Maar belangrijker: we vieren successen! Teams die hun agents effectief inzetten worden in de spotlight gezet. We leren van wat werkt en optimaliseren continu op basis van data."
               }
             ].map((step) => (
@@ -612,9 +612,20 @@ export default function CribConnectsOnePager() {
                 Laten we samen jouw AI-transformatie realiseren.
                 Met praktische coaching en meetbare resultaten gaan we van licenties naar cultuurverandering.
               </p>
-              <button className="px-10 py-4 text-white rounded-xl font-semibold hover:shadow-2xl transition-all sans shadow-lg text-base" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
-                Plan een Kennismaking
-              </button>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="mailto:info@cribconnects.com" className="flex items-center gap-3 text-gray-700 hover:text-gray-900 transition-all group">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
+                    <Mail className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-base font-medium sans">info@cribconnects.com</span>
+                </a>
+                <a href="tel:+31639611117" className="flex items-center gap-3 text-gray-700 hover:text-gray-900 transition-all group">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
+                    <Phone className="w-6 h-6 text-white" />
+                  </div>
+                  <span className="text-base font-medium sans">+31 6 396 111 17</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
