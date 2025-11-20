@@ -10,8 +10,10 @@ export default function CribConnectsOnePager() {
     problem3: false,
     strategy1: true,
     strategy2: true,
+    strategy3: true,
     tool1: false,
     tool2: false,
+    whyPlatforms: true,
     step1: false,
     step2: false,
     step3: false,
@@ -277,111 +279,148 @@ export default function CribConnectsOnePager() {
           </div>
 
           <div className="space-y-6 mb-10">
-            <div className="glass-strong border border-cyan-200/50 rounded-2xl p-8 shadow-lg min-h-[280px] flex flex-col">
-              <div className="flex justify-between items-start mb-5">
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center shadow-md" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
-                  <Target className="w-7 h-7 text-white" />
-                </div>
-                <button onClick={() => toggle('strategy1')}>
-                  <ChevronDown className={`w-6 h-6 transition-transform ${expanded.strategy1 ? 'rotate-180' : ''}`} style={{ color: '#66C5D6' }} />
-                </button>
+            <button
+              onClick={() => toggle('strategy1')}
+              className="w-full glass-strong border border-cyan-200/50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all text-left"
+            >
+              <div className="flex justify-between items-center mb-6">
+                <h3 className="text-2xl font-bold text-gray-900 sans">AI als Kans</h3>
+                <ChevronDown className={`w-6 h-6 transition-transform ${expanded.strategy1 ? 'rotate-180' : ''}`} style={{ color: '#66C5D6' }} />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 sans mb-3">AI als Kans</h3>
 
               <div className={`overflow-hidden transition-all duration-300 ${
-                expanded.strategy1 ? 'max-h-[500px]' : 'max-h-24'
+                expanded.strategy1 ? 'max-h-[1000px]' : 'max-h-0'
               }`}>
-                <p className="text-sm text-gray-700 sans font-light mb-5 leading-relaxed">
+                <p className="text-sm text-gray-700 sans font-light mb-8 leading-relaxed text-center max-w-2xl mx-auto">
                   Wij zien <strong className="font-semibold">AI</strong> niet zomaar als een tool, maar als een <strong className="font-semibold">strategische kans</strong> om je <strong className="font-semibold">organisatie</strong> fundamenteel te verbeteren. Het gaat niet om <strong className="font-semibold">technologie</strong>, maar om <strong className="font-semibold">mensen en cultuur</strong>.
                 </p>
-                <ul className="space-y-3 text-sm text-gray-700 sans">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#66C5D6' }} />
-                    <div>
-                      <span className="font-semibold block mb-1">Workforce Modernisering</span>
-                      <span className="font-light text-gray-600">Rust je team uit met toekomstbestendige skills en werk methoden die écht waarde toevoegen</span>
+                <div className="space-y-8">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md mb-4" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
+                      <TrendingUp className="w-7 h-7" style={{ color: '#66C5D6' }} />
                     </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#66C5D6' }} />
-                    <div>
-                      <span className="font-semibold block mb-1">Cultuurverandering</span>
-                      <span className="font-light text-gray-600">Van weerstand naar enthousiasme: we maken AI onderdeel van jullie DNA</span>
+                    <div className="max-w-2xl">
+                      <div className="text-lg font-semibold text-gray-900 sans mb-2">Workforce Modernisering</div>
+                      <div className="text-base text-gray-600 sans font-light leading-relaxed">Rust je team uit met <strong className="font-medium">toekomstbestendige skills</strong> en werk methoden die écht <strong className="font-medium">waarde toevoegen</strong></div>
                     </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#66C5D6' }} />
-                    <div>
-                      <span className="font-semibold block mb-1">Mindset Verschuiving</span>
-                      <span className="font-light text-gray-600">Van "AI vervangt ons" naar "AI maakt ons beter": een growth mindset creëren</span>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md mb-4" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
+                      <Users className="w-7 h-7" style={{ color: '#66C5D6' }} />
                     </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="glass-strong border border-cyan-200/50 rounded-2xl p-8 shadow-lg min-h-[280px] flex flex-col">
-              <div className="flex justify-between items-start mb-5">
-                <div className="w-14 h-14 rounded-xl flex items-center justify-center shadow-md" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
-                  <Users className="w-7 h-7 text-white" />
+                    <div className="max-w-2xl">
+                      <div className="text-lg font-semibold text-gray-900 sans mb-2">Cultuurverandering</div>
+                      <div className="text-base text-gray-600 sans font-light leading-relaxed">Van <strong className="font-medium">weerstand naar enthousiasme</strong>: we maken AI <strong className="font-medium">onderdeel van jullie DNA</strong></div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md mb-4" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
+                      <Brain className="w-7 h-7" style={{ color: '#66C5D6' }} />
+                    </div>
+                    <div className="max-w-2xl">
+                      <div className="text-lg font-semibold text-gray-900 sans mb-2">Mindset Verschuiving</div>
+                      <div className="text-base text-gray-600 sans font-light leading-relaxed">Van "<strong className="font-medium">AI vervangt ons</strong>" naar "<strong className="font-medium">AI maakt ons beter</strong>": een growth mindset creëren</div>
+                    </div>
+                  </div>
                 </div>
-                <button onClick={() => toggle('strategy2')}>
-                  <ChevronDown className={`w-6 h-6 transition-transform ${expanded.strategy2 ? 'rotate-180' : ''}`} style={{ color: '#66C5D6' }} />
-                </button>
               </div>
-              <h3 className="text-2xl font-bold text-gray-900 sans mb-3">Menselijk Perspectief</h3>
+            </button>
+
+            <button
+              onClick={() => toggle('strategy2')}
+              className="w-full glass-strong border border-cyan-200/50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all text-left"
+            >
+              <div className="flex justify-between items-center mb-6">
+                <h3 className="text-2xl font-bold text-gray-900 sans">Menselijk Perspectief</h3>
+                <ChevronDown className={`w-6 h-6 transition-transform ${expanded.strategy2 ? 'rotate-180' : ''}`} style={{ color: '#66C5D6' }} />
+              </div>
 
               <div className={`overflow-hidden transition-all duration-300 ${
-                expanded.strategy2 ? 'max-h-[500px]' : 'max-h-24'
+                expanded.strategy2 ? 'max-h-[1000px]' : 'max-h-0'
               }`}>
-                <p className="text-sm text-gray-700 sans font-light mb-5 leading-relaxed">
+                <p className="text-sm text-gray-700 sans font-light mb-8 leading-relaxed text-center max-w-2xl mx-auto">
                   We benaderen <strong className="font-semibold">AI</strong> vanuit het <strong className="font-semibold">menselijk perspectief</strong>: hoe kan AI het <strong className="font-semibold">werk</strong> van individuele medewerkers <strong className="font-semibold">leuker en betekenisvoller</strong> maken?
                 </p>
-                <ul className="space-y-3 text-sm text-gray-700 sans">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#66C5D6' }} />
-                    <div>
-                      <span className="font-semibold block mb-1">Werk Leuker Maken</span>
-                      <span className="font-light text-gray-600">Automatiseer saaie taken zodat mensen zich kunnen focussen op interessant werk</span>
+                <div className="space-y-8">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md mb-4" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
+                      <Sparkles className="w-7 h-7" style={{ color: '#66C5D6' }} />
                     </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#66C5D6' }} />
-                    <div>
-                      <span className="font-semibold block mb-1">Ruimte voor Creativiteit</span>
-                      <span className="font-light text-gray-600">Tijd en energie vrijmaken voor strategisch denken en innovatieve projecten</span>
+                    <div className="max-w-2xl">
+                      <div className="text-lg font-semibold text-gray-900 sans mb-2">Werk Leuker Maken</div>
+                      <div className="text-base text-gray-600 sans font-light leading-relaxed">Automatiseer <strong className="font-medium">saaie taken</strong> zodat mensen zich kunnen focussen op <strong className="font-medium">interessant werk</strong></div>
                     </div>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" style={{ color: '#66C5D6' }} />
-                    <div>
-                      <span className="font-semibold block mb-1">Extra Productieve Taken</span>
-                      <span className="font-light text-gray-600">Focus op hoogwaardige taken waar mensen écht verschil maken</span>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md mb-4" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
+                      <Lightbulb className="w-7 h-7" style={{ color: '#66C5D6' }} />
                     </div>
-                  </li>
-                </ul>
+                    <div className="max-w-2xl">
+                      <div className="text-lg font-semibold text-gray-900 sans mb-2">Ruimte voor Creativiteit</div>
+                      <div className="text-base text-gray-600 sans font-light leading-relaxed">Tijd en energie vrijmaken voor <strong className="font-medium">strategisch denken</strong> en <strong className="font-medium">innovatieve projecten</strong></div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md mb-4" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
+                      <Target className="w-7 h-7" style={{ color: '#66C5D6' }} />
+                    </div>
+                    <div className="max-w-2xl">
+                      <div className="text-lg font-semibold text-gray-900 sans mb-2">Extra Productieve Taken</div>
+                      <div className="text-base text-gray-600 sans font-light leading-relaxed">Focus op <strong className="font-medium">hoogwaardige taken</strong> waar mensen écht <strong className="font-medium">verschil maken</strong></div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
+            </button>
           </div>
 
-          <div className="glass-strong rounded-2xl p-10 border border-cyan-200/50 shadow-xl" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.08) 0%, rgba(102, 197, 214, 0.05) 100%)' }}>
-            <div className="flex items-start gap-6">
-              <div className="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
-                <Zap className="w-9 h-9 text-white" />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-bold text-gray-900 sans mb-4">Hoe Doen We Dit?</h3>
-                <p className="text-lg text-gray-700 sans font-light leading-relaxed mb-4">
-                  <strong className="font-semibold">Praktische coaching op de werkvloer</strong>: geen theoretische workshops of PowerPoints, maar echte begeleiding waar het gebeurt.
-                </p>
-                <p className="text-base text-gray-600 sans font-light leading-relaxed">
-                  Wij spitten <strong className="font-medium">workflows van individuen</strong> uit, identificeren concrete AI-kansen en begeleiden hands-on bij implementatie.
-                  Niet vanuit een technisch perspectief, maar vanuit hun <strong className="font-medium">eigen behoeften, frustraties en ambities</strong>.
-                  Zo ontstaat natuurlijke adoptie en enthousiasme.
-                </p>
+          <button
+            onClick={() => toggle('strategy3')}
+            className="w-full glass-strong rounded-2xl p-10 border border-cyan-200/50 shadow-xl hover:shadow-2xl transition-all text-left"
+            style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.08) 0%, rgba(102, 197, 214, 0.05) 100%)' }}
+          >
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="text-2xl font-bold text-gray-900 sans">Hoe Doen We Dit?</h3>
+              <ChevronDown className={`w-6 h-6 transition-transform ${expanded.strategy3 ? 'rotate-180' : ''}`} style={{ color: '#66C5D6' }} />
+            </div>
+
+            <div className={`overflow-hidden transition-all duration-300 ${
+              expanded.strategy3 ? 'max-h-[1000px]' : 'max-h-0'
+            }`}>
+              <p className="text-lg text-gray-700 sans font-light leading-relaxed mb-8 text-center max-w-2xl mx-auto">
+                <strong className="font-semibold">Praktische coaching op de werkvloer</strong>: geen theoretische workshops of PowerPoints, maar echte begeleiding waar het gebeurt.
+              </p>
+              <div className="space-y-8">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg mb-4" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
+                    <Users className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="max-w-2xl">
+                    <div className="text-lg font-semibold text-gray-900 sans mb-2">Individuele Begeleiding</div>
+                    <div className="text-base text-gray-600 sans font-light leading-relaxed">Wij spitten <strong className="font-medium">workflows van individuen</strong> uit en identificeren <strong className="font-medium">concrete AI-kansen</strong> per persoon</div>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg mb-4" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
+                    <Zap className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="max-w-2xl">
+                    <div className="text-lg font-semibold text-gray-900 sans mb-2">Hands-on Implementatie</div>
+                    <div className="text-base text-gray-600 sans font-light leading-relaxed">We begeleiden <strong className="font-medium">hands-on bij implementatie</strong>, niet vanuit techniek maar vanuit <strong className="font-medium">eigen behoeften en ambities</strong></div>
+                  </div>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg mb-4" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
+                    <Rocket className="w-8 h-8 text-white" />
+                  </div>
+                  <div className="max-w-2xl">
+                    <div className="text-lg font-semibold text-gray-900 sans mb-2">Natuurlijke Adoptie</div>
+                    <div className="text-base text-gray-600 sans font-light leading-relaxed">Door persoonlijke aanpak ontstaat <strong className="font-medium">natuurlijke adoptie</strong> en <strong className="font-medium">enthousiasme</strong> binnen het team</div>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
+          </button>
         </div>
       </section>
 
@@ -503,38 +542,49 @@ export default function CribConnectsOnePager() {
             </button>
           </div>
 
-          <div className="glass-strong rounded-2xl p-10 border border-cyan-200/50 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 sans mb-8 text-center">Waarom Deze Platforms?</h3>
-            <div className="space-y-8">
-              <div className="flex flex-col items-center text-center">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md mb-4" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
-                  <Target className="w-7 h-7" style={{ color: '#66C5D6' }} />
+          <button
+            onClick={() => toggle('whyPlatforms')}
+            className="w-full glass-strong rounded-2xl p-10 border border-cyan-200/50 shadow-lg hover:shadow-xl transition-all text-left"
+          >
+            <div className="flex justify-between items-center mb-6">
+              <h3 className="text-2xl font-bold text-gray-900 sans">Waarom Deze Platforms?</h3>
+              <ChevronDown className={`w-6 h-6 transition-transform ${expanded.whyPlatforms ? 'rotate-180' : ''}`} style={{ color: '#66C5D6' }} />
+            </div>
+
+            <div className={`overflow-hidden transition-all duration-300 ${
+              expanded.whyPlatforms ? 'max-h-[1000px]' : 'max-h-0'
+            }`}>
+              <div className="space-y-8">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md mb-4" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
+                    <Target className="w-7 h-7" style={{ color: '#66C5D6' }} />
+                  </div>
+                  <div className="max-w-2xl">
+                    <div className="text-lg font-semibold text-gray-900 sans mb-2">Geen Custom Development</div>
+                    <div className="text-base text-gray-600 sans font-light leading-relaxed">Dan hoef je <strong className="font-medium">niet software te maken</strong> die je zelf moet <strong className="font-medium">onderhouden, updaten en beveiligen</strong>. Focus op <strong className="font-medium">adoptie</strong>, niet op technologie.</div>
+                  </div>
                 </div>
-                <div className="max-w-2xl">
-                  <div className="text-lg font-semibold text-gray-900 sans mb-2">Geen Custom Development</div>
-                  <div className="text-base text-gray-600 sans font-light leading-relaxed">Dan hoef je <strong className="font-medium">niet software te maken</strong> die je zelf moet <strong className="font-medium">onderhouden, updaten en beveiligen</strong>. Focus op <strong className="font-medium">adoptie</strong>, niet op technologie.</div>
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md mb-4" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
+                    <CheckCircle className="w-7 h-7" style={{ color: '#66C5D6' }} />
+                  </div>
+                  <div className="max-w-2xl">
+                    <div className="text-lg font-semibold text-gray-900 sans mb-2">Volledig Compliant</div>
+                    <div className="text-base text-gray-600 sans font-light leading-relaxed">Beide platforms voldoen aan <strong className="font-medium">AVG, NIS2, DORA</strong> en andere relevante wetgeving. <strong className="font-medium">Enterprise-grade security</strong> out of the box.</div>
+                  </div>
                 </div>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md mb-4" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
-                  <CheckCircle className="w-7 h-7" style={{ color: '#66C5D6' }} />
-                </div>
-                <div className="max-w-2xl">
-                  <div className="text-lg font-semibold text-gray-900 sans mb-2">Volledig Compliant</div>
-                  <div className="text-base text-gray-600 sans font-light leading-relaxed">Beide platforms voldoen aan <strong className="font-medium">AVG, NIS2, DORA</strong> en andere relevante wetgeving. <strong className="font-medium">Enterprise-grade security</strong> out of the box.</div>
-                </div>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md mb-4" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
-                  <Award className="w-7 h-7" style={{ color: '#66C5D6' }} />
-                </div>
-                <div className="max-w-2xl">
-                  <div className="text-lg font-semibold text-gray-900 sans mb-2">Beste AI-modellen</div>
-                  <div className="text-base text-gray-600 sans font-light leading-relaxed"><strong className="font-medium">Google Gemini</strong> en <strong className="font-medium">Microsoft Copilot</strong> (Claude + GPT-4) zijn de <strong className="font-medium">krachtigste modellen</strong> beschikbaar vandaag.</div>
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-md mb-4" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
+                    <Award className="w-7 h-7" style={{ color: '#66C5D6' }} />
+                  </div>
+                  <div className="max-w-2xl">
+                    <div className="text-lg font-semibold text-gray-900 sans mb-2">Beste AI-modellen</div>
+                    <div className="text-base text-gray-600 sans font-light leading-relaxed"><strong className="font-medium">Google Gemini</strong> en <strong className="font-medium">Microsoft Copilot</strong> (Claude + GPT-4) zijn de <strong className="font-medium">krachtigste modellen</strong> beschikbaar vandaag.</div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          </button>
         </div>
       </section>
 
