@@ -4,6 +4,7 @@ import { ChevronDown, Sparkles, Users, Target, Zap, CheckCircle, MessageSquare, 
 export default function CribConnectsOnePager() {
   const [activeSection, setActiveSection] = useState('hero');
   const [expanded, setExpanded] = useState({
+    hero: false,
     problem1: false,
     problem2: false,
     problem3: false,
@@ -88,83 +89,95 @@ export default function CribConnectsOnePager() {
 
       {/* Hero */}
       <section id="hero" className="pt-32 pb-20 px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-gray-900 serif leading-tight">
-                Van Licenties naar <span style={{ color: '#88D8E8' }}>Cultuur</span>
-              </h1>
+        <div className="max-w-4xl mx-auto">
+          {/* Main Title Section */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl md:text-6xl font-bold mb-8 text-gray-900 serif leading-tight">
+              Van Licenties naar <span style={{ color: '#88D8E8' }}>Cultuur</span>
+            </h1>
 
-              <p className="text-lg text-gray-700 mb-6 sans font-light leading-relaxed">
-                Waar veel bedrijven AI software inkopen, zelf bouwen en licenties toekennen, gebeurt bij <strong className="font-semibold text-gray-900">implementatie vrij weinig</strong>.
-              </p>
+            <p className="text-xl text-gray-700 mb-6 sans font-light leading-relaxed max-w-3xl mx-auto">
+              Waar veel bedrijven AI software inkopen, zelf bouwen en licenties toekennen, gebeurt bij <strong className="font-semibold text-gray-900">implementatie vrij weinig</strong>.
+            </p>
 
-              <p className="text-base text-gray-600 mb-8 sans font-light leading-relaxed">
-                Wij zien AI als een <strong className="font-semibold text-gray-900">kans</strong> om je workforce te moderniseren en een <strong className="font-semibold text-gray-900">cultuurverandering</strong> te bewerkstelligen.
-                Door <strong className="font-semibold text-gray-900">praktische coaching op de werkvloer</strong> zorgen we voor echte adoptie.
-              </p>
+            <p className="text-lg text-gray-600 mb-10 sans font-light leading-relaxed max-w-3xl mx-auto">
+              Wij zien AI als een <strong className="font-semibold text-gray-900">kans</strong> om je workforce te moderniseren en een <strong className="font-semibold text-gray-900">cultuurverandering</strong> te bewerkstelligen.
+              Door <strong className="font-semibold text-gray-900">praktische coaching op de werkvloer</strong> zorgen we voor echte adoptie.
+            </p>
 
-              <div className="flex gap-3">
-                <button
-                  onClick={() => scrollTo('aanpak')}
-                  className="px-6 py-3 text-white rounded-xl font-medium hover:shadow-lg transition-all sans text-sm shadow-md"
-                  style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}
-                >
-                  Bekijk Onze Aanpak
-                </button>
-                <button
-                  onClick={() => scrollTo('probleem')}
-                  className="px-6 py-3 glass text-gray-700 rounded-xl font-medium hover:glass-strong transition-all border border-cyan-200/50 sans text-sm"
-                >
-                  Het Probleem
-                </button>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
+                onClick={() => scrollTo('aanpak')}
+                className="px-8 py-4 text-white rounded-xl font-medium hover:shadow-lg transition-all sans text-base shadow-md"
+                style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}
+              >
+                Bekijk Onze Aanpak
+              </button>
+              <button
+                onClick={() => scrollTo('probleem')}
+                className="px-8 py-4 glass text-gray-700 rounded-xl font-medium hover:glass-strong transition-all border border-cyan-200/50 sans text-base"
+              >
+                Het Probleem
+              </button>
             </div>
+          </div>
 
-            <div className="glass-strong rounded-3xl p-8 border border-cyan-200/50 shadow-xl">
-              <div className="flex items-center gap-4 mb-6">
+          {/* Waarom CribConnects - Expandable */}
+          <button
+            onClick={() => toggle('hero')}
+            className="w-full glass-strong rounded-3xl p-8 border border-cyan-200/50 shadow-xl hover:shadow-2xl transition-all text-left"
+          >
+            <div className="flex items-center justify-between mb-2">
+              <div className="flex items-center gap-4">
                 <div className="w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
                   <Sparkles className="w-7 h-7 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 sans">Waarom CribConnects?</h3>
-                  <p className="text-sm text-gray-600 sans font-light">Onze aanpak</p>
+                  <h3 className="text-2xl font-bold text-gray-900 sans">Waarom CribConnects?</h3>
+                  <p className="text-sm text-gray-600 sans font-light">Onze aanpak in het kort</p>
                 </div>
               </div>
+              <ChevronDown className={`w-7 h-7 transition-transform flex-shrink-0 ${
+                expanded.hero ? 'rotate-180' : ''
+              }`} style={{ color: '#66C5D6' }} />
+            </div>
 
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(136, 216, 232, 0.15)' }}>
-                    <Brain className="w-5 h-5" style={{ color: '#66C5D6' }} />
+            <div className={`overflow-hidden transition-all duration-300 ${
+              expanded.hero ? 'max-h-[600px] mt-8' : 'max-h-0'
+            }`}>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(136, 216, 232, 0.15)' }}>
+                    <Brain className="w-6 h-6" style={{ color: '#66C5D6' }} />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-gray-900 sans mb-1">Mensgerichte Implementatie</div>
-                    <div className="text-xs text-gray-600 sans font-light leading-relaxed">We focussen op het individu en maken werk leuker, niet moeilijker</div>
+                    <div className="text-base font-semibold text-gray-900 sans mb-2">Mensgerichte Implementatie</div>
+                    <div className="text-sm text-gray-600 sans font-light leading-relaxed">We focussen op het individu en maken werk leuker, niet moeilijker. Het gaat om mensen, niet om technologie.</div>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(136, 216, 232, 0.15)' }}>
-                    <Lightbulb className="w-5 h-5" style={{ color: '#66C5D6' }} />
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(136, 216, 232, 0.15)' }}>
+                    <Lightbulb className="w-6 h-6" style={{ color: '#66C5D6' }} />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-gray-900 sans mb-1">Praktische Coaching</div>
-                    <div className="text-xs text-gray-600 sans font-light leading-relaxed">Begeleiding op de werkvloer, niet vanuit theorie maar vanuit praktijk</div>
+                    <div className="text-base font-semibold text-gray-900 sans mb-2">Praktische Coaching</div>
+                    <div className="text-sm text-gray-600 sans font-light leading-relaxed">Begeleiding op de werkvloer, niet vanuit theorie maar vanuit praktijk. We gaan mee in jullie dagelijkse werk.</div>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(136, 216, 232, 0.15)' }}>
-                    <Rocket className="w-5 h-5" style={{ color: '#66C5D6' }} />
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(136, 216, 232, 0.15)' }}>
+                    <Rocket className="w-6 h-6" style={{ color: '#66C5D6' }} />
                   </div>
                   <div>
-                    <div className="text-sm font-semibold text-gray-900 sans mb-1">Meetbare Resultaten</div>
-                    <div className="text-xs text-gray-600 sans font-light leading-relaxed">Agents worden KPI's, we vieren successen en optimaliseren continu</div>
+                    <div className="text-base font-semibold text-gray-900 sans mb-2">Meetbare Resultaten</div>
+                    <div className="text-sm text-gray-600 sans font-light leading-relaxed">Agents worden KPI's, we vieren successen en optimaliseren continu. Concrete resultaten, geen vage beloftes.</div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </button>
         </div>
       </section>
 
@@ -172,13 +185,15 @@ export default function CribConnectsOnePager() {
 
       {/* Probleem */}
       <section id="probleem" className="py-16 px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900 serif">Het Probleem</h2>
-          <p className="text-lg text-gray-600 mb-10 sans font-light">
-            Waarom <strong className="font-semibold text-gray-900">AI-investeringen</strong> vaak niet renderen en adoptie laag blijft
-          </p>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-gray-900 serif">Het Probleem</h2>
+            <p className="text-lg text-gray-600 sans font-light">
+              Waarom <strong className="font-semibold text-gray-900">AI-investeringen</strong> vaak niet renderen en adoptie laag blijft
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-3 gap-5 mb-8">
+          <div className="space-y-5 mb-10">
             {[
               {
                 id: 'problem1',
@@ -253,13 +268,15 @@ export default function CribConnectsOnePager() {
 
       {/* Strategie */}
       <section id="strategie" className="py-16 px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900 serif">Onze Strategie</h2>
-          <p className="text-lg text-gray-600 mb-10 sans font-light">
-            AI als <strong className="font-semibold text-gray-900">katalysator</strong> voor organisatieverandering en workforce modernisering
-          </p>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-gray-900 serif">Onze Strategie</h2>
+            <p className="text-lg text-gray-600 sans font-light">
+              AI als <strong className="font-semibold text-gray-900">katalysator</strong> voor organisatieverandering en workforce modernisering
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <div className="space-y-6 mb-10">
             <div className="glass-strong border border-cyan-200/50 rounded-2xl p-8 shadow-lg">
               <div className="flex justify-between items-start mb-5">
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center shadow-md" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
@@ -372,13 +389,15 @@ export default function CribConnectsOnePager() {
 
       {/* Tooling */}
       <section id="tooling" className="py-16 px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900 serif">Welke Tooling?</h2>
-          <p className="text-lg text-gray-600 mb-10 sans font-light">
-            We zetten in op <strong className="font-semibold text-gray-900">Google Gemini</strong> of <strong className="font-semibold text-gray-900">Microsoft Copilot</strong>: enterprise-ready platforms met volledige compliance
-          </p>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-gray-900 serif">Welke Tooling?</h2>
+            <p className="text-lg text-gray-600 sans font-light">
+              We zetten in op <strong className="font-semibold text-gray-900">Google Gemini</strong> of <strong className="font-semibold text-gray-900">Microsoft Copilot</strong>: enterprise-ready platforms met volledige compliance
+            </p>
+          </div>
 
-          <div className="grid md:grid-cols-2 gap-5 mb-8">
+          <div className="space-y-5 mb-10">
             <button
               onClick={() => toggle('tool1')}
               className="glass-strong border rounded-2xl p-8 hover:shadow-2xl transition-all text-left group"
@@ -485,15 +504,15 @@ export default function CribConnectsOnePager() {
           </div>
 
           <div className="glass-strong rounded-2xl p-8 border border-cyan-200/50 shadow-lg">
-            <h3 className="text-xl font-bold text-gray-900 sans mb-6">Waarom Deze Platforms?</h3>
-            <div className="grid md:grid-cols-3 gap-6">
+            <h3 className="text-xl font-bold text-gray-900 sans mb-6 text-center">Waarom Deze Platforms?</h3>
+            <div className="space-y-5">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(136, 216, 232, 0.15)' }}>
                   <Target className="w-6 h-6" style={{ color: '#66C5D6' }} />
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-gray-900 sans mb-2">Geen Custom Development</div>
-                  <div className="text-xs text-gray-600 sans font-light leading-relaxed">Dan hoef je niet software te maken die je zelf moet onderhouden, updaten en beveiligen. Focus op adoptie, niet op technologie.</div>
+                  <div className="text-base font-semibold text-gray-900 sans mb-2">Geen Custom Development</div>
+                  <div className="text-sm text-gray-600 sans font-light leading-relaxed">Dan hoef je niet software te maken die je zelf moet onderhouden, updaten en beveiligen. Focus op adoptie, niet op technologie.</div>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -501,8 +520,8 @@ export default function CribConnectsOnePager() {
                   <CheckCircle className="w-6 h-6" style={{ color: '#66C5D6' }} />
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-gray-900 sans mb-2">Volledig Compliant</div>
-                  <div className="text-xs text-gray-600 sans font-light leading-relaxed">Beide platforms voldoen aan AVG, NIS2, DORA en andere relevante wetgeving. Enterprise-grade security out of the box.</div>
+                  <div className="text-base font-semibold text-gray-900 sans mb-2">Volledig Compliant</div>
+                  <div className="text-sm text-gray-600 sans font-light leading-relaxed">Beide platforms voldoen aan AVG, NIS2, DORA en andere relevante wetgeving. Enterprise-grade security out of the box.</div>
                 </div>
               </div>
               <div className="flex items-start gap-4">
@@ -510,8 +529,8 @@ export default function CribConnectsOnePager() {
                   <Award className="w-6 h-6" style={{ color: '#66C5D6' }} />
                 </div>
                 <div>
-                  <div className="text-sm font-semibold text-gray-900 sans mb-2">Beste AI-modellen</div>
-                  <div className="text-xs text-gray-600 sans font-light leading-relaxed">Google Gemini en Microsoft Copilot (Claude + GPT-4) zijn de krachtigste modellen beschikbaar vandaag.</div>
+                  <div className="text-base font-semibold text-gray-900 sans mb-2">Beste AI-modellen</div>
+                  <div className="text-sm text-gray-600 sans font-light leading-relaxed">Google Gemini en Microsoft Copilot (Claude + GPT-4) zijn de krachtigste modellen beschikbaar vandaag.</div>
                 </div>
               </div>
             </div>
@@ -523,13 +542,15 @@ export default function CribConnectsOnePager() {
 
       {/* Aanpak */}
       <section id="aanpak" className="py-16 px-8">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4 text-gray-900 serif">Onze Aanpak</h2>
-          <p className="text-lg text-gray-600 mb-10 sans font-light">
-            <strong className="font-semibold text-gray-900">Custom-made</strong> implementatie in 4 fases: van enthousiasme naar resultaten
-          </p>
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-4 text-gray-900 serif">Onze Aanpak</h2>
+            <p className="text-lg text-gray-600 sans font-light">
+              <strong className="font-semibold text-gray-900">Custom-made</strong> implementatie in 4 fases: van enthousiasme naar resultaten
+            </p>
+          </div>
 
-          <div className="space-y-4">
+          <div className="space-y-5">
             {[
               {
                 id: 'step1',
