@@ -146,33 +146,33 @@ export default function CribConnectsOnePager() {
               expanded.hero ? 'max-h-[600px] mt-8' : 'max-h-0'
             }`}>
               <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(136, 216, 232, 0.15)' }}>
-                    <Brain className="w-6 h-6" style={{ color: '#66C5D6' }} />
+                <div className="flex items-start gap-5">
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
+                    <Brain className="w-7 h-7" style={{ color: '#66C5D6' }} />
                   </div>
-                  <div>
-                    <div className="text-base font-semibold text-gray-900 sans mb-2">Mensgerichte Implementatie</div>
-                    <div className="text-sm text-gray-600 sans font-light leading-relaxed">We focussen op het individu en maken werk leuker, niet moeilijker. Het gaat om mensen, niet om technologie.</div>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(136, 216, 232, 0.15)' }}>
-                    <Lightbulb className="w-6 h-6" style={{ color: '#66C5D6' }} />
-                  </div>
-                  <div>
-                    <div className="text-base font-semibold text-gray-900 sans mb-2">Praktische Coaching</div>
-                    <div className="text-sm text-gray-600 sans font-light leading-relaxed">Begeleiding op de werkvloer, niet vanuit theorie maar vanuit praktijk. We gaan mee in jullie dagelijkse werk.</div>
+                  <div className="flex-1">
+                    <div className="text-lg font-semibold text-gray-900 sans mb-2">Mensgerichte Implementatie</div>
+                    <div className="text-base text-gray-600 sans font-light leading-relaxed">We focussen op het individu en maken werk leuker, niet moeilijker. Het gaat om mensen, niet om technologie.</div>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(136, 216, 232, 0.15)' }}>
-                    <Rocket className="w-6 h-6" style={{ color: '#66C5D6' }} />
+                <div className="flex items-start gap-5">
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
+                    <Lightbulb className="w-7 h-7" style={{ color: '#66C5D6' }} />
                   </div>
-                  <div>
-                    <div className="text-base font-semibold text-gray-900 sans mb-2">Meetbare Resultaten</div>
-                    <div className="text-sm text-gray-600 sans font-light leading-relaxed">Agents worden KPI's, we vieren successen en optimaliseren continu. Concrete resultaten, geen vage beloftes.</div>
+                  <div className="flex-1">
+                    <div className="text-lg font-semibold text-gray-900 sans mb-2">Praktische Coaching</div>
+                    <div className="text-base text-gray-600 sans font-light leading-relaxed">Begeleiding op de werkvloer, niet vanuit theorie maar vanuit praktijk. We gaan mee in jullie dagelijkse werk.</div>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-5">
+                  <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
+                    <Rocket className="w-7 h-7" style={{ color: '#66C5D6' }} />
+                  </div>
+                  <div className="flex-1">
+                    <div className="text-lg font-semibold text-gray-900 sans mb-2">Meetbare Resultaten</div>
+                    <div className="text-base text-gray-600 sans font-light leading-relaxed">Agents worden KPI's, we vieren successen en optimaliseren continu. Concrete resultaten, geen vage beloftes.</div>
                   </div>
                 </div>
               </div>
@@ -364,17 +364,17 @@ export default function CribConnectsOnePager() {
             </div>
           </div>
 
-          <div className="glass-strong rounded-2xl p-8 border border-cyan-200/50 shadow-xl" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.15) 0%, rgba(102, 197, 214, 0.1) 100%)' }}>
-            <div className="flex items-start gap-5">
+          <div className="glass-strong rounded-2xl p-10 border border-cyan-200/50 shadow-xl" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.08) 0%, rgba(102, 197, 214, 0.05) 100%)' }}>
+            <div className="flex items-start gap-6">
               <div className="w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
-                <Zap className="w-8 h-8 text-white" />
+                <Zap className="w-9 h-9 text-white" />
               </div>
               <div className="flex-1">
-                <h3 className="text-xl font-bold text-gray-900 sans mb-3">Hoe Doen We Dit?</h3>
-                <p className="text-base text-gray-700 sans font-light leading-relaxed mb-4">
+                <h3 className="text-2xl font-bold text-gray-900 sans mb-4">Hoe Doen We Dit?</h3>
+                <p className="text-lg text-gray-700 sans font-light leading-relaxed mb-4">
                   <strong className="font-semibold">Praktische coaching op de werkvloer</strong>: geen theoretische workshops of PowerPoints, maar echte begeleiding waar het gebeurt.
                 </p>
-                <p className="text-sm text-gray-600 sans font-light leading-relaxed">
+                <p className="text-base text-gray-600 sans font-light leading-relaxed">
                   Wij spitten <strong className="font-medium">workflows van individuen</strong> uit, identificeren concrete AI-kansen en begeleiden hands-on bij implementatie.
                   Niet vanuit een technisch perspectief, maar vanuit hun <strong className="font-medium">eigen behoeften, frustraties en ambities</strong>.
                   Zo ontstaat natuurlijke adoptie en enthousiasme.
@@ -503,34 +503,34 @@ export default function CribConnectsOnePager() {
             </button>
           </div>
 
-          <div className="glass-strong rounded-2xl p-8 border border-cyan-200/50 shadow-lg">
-            <h3 className="text-xl font-bold text-gray-900 sans mb-6 text-center">Waarom Deze Platforms?</h3>
-            <div className="space-y-5">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(136, 216, 232, 0.15)' }}>
-                  <Target className="w-6 h-6" style={{ color: '#66C5D6' }} />
+          <div className="glass-strong rounded-2xl p-10 border border-cyan-200/50 shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 sans mb-8 text-center">Waarom Deze Platforms?</h3>
+            <div className="space-y-6">
+              <div className="flex items-start gap-5">
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
+                  <Target className="w-7 h-7" style={{ color: '#66C5D6' }} />
                 </div>
-                <div>
-                  <div className="text-base font-semibold text-gray-900 sans mb-2">Geen Custom Development</div>
-                  <div className="text-sm text-gray-600 sans font-light leading-relaxed">Dan hoef je niet software te maken die je zelf moet onderhouden, updaten en beveiligen. Focus op adoptie, niet op technologie.</div>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(136, 216, 232, 0.15)' }}>
-                  <CheckCircle className="w-6 h-6" style={{ color: '#66C5D6' }} />
-                </div>
-                <div>
-                  <div className="text-base font-semibold text-gray-900 sans mb-2">Volledig Compliant</div>
-                  <div className="text-sm text-gray-600 sans font-light leading-relaxed">Beide platforms voldoen aan AVG, NIS2, DORA en andere relevante wetgeving. Enterprise-grade security out of the box.</div>
+                <div className="flex-1">
+                  <div className="text-lg font-semibold text-gray-900 sans mb-2">Geen Custom Development</div>
+                  <div className="text-base text-gray-600 sans font-light leading-relaxed">Dan hoef je niet software te maken die je zelf moet onderhouden, updaten en beveiligen. Focus op adoptie, niet op technologie.</div>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(136, 216, 232, 0.15)' }}>
-                  <Award className="w-6 h-6" style={{ color: '#66C5D6' }} />
+              <div className="flex items-start gap-5">
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
+                  <CheckCircle className="w-7 h-7" style={{ color: '#66C5D6' }} />
                 </div>
-                <div>
-                  <div className="text-base font-semibold text-gray-900 sans mb-2">Beste AI-modellen</div>
-                  <div className="text-sm text-gray-600 sans font-light leading-relaxed">Google Gemini en Microsoft Copilot (Claude + GPT-4) zijn de krachtigste modellen beschikbaar vandaag.</div>
+                <div className="flex-1">
+                  <div className="text-lg font-semibold text-gray-900 sans mb-2">Volledig Compliant</div>
+                  <div className="text-base text-gray-600 sans font-light leading-relaxed">Beide platforms voldoen aan AVG, NIS2, DORA en andere relevante wetgeving. Enterprise-grade security out of the box.</div>
+                </div>
+              </div>
+              <div className="flex items-start gap-5">
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-md" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.2) 0%, rgba(102, 197, 214, 0.15) 100%)', border: '2px solid rgba(136, 216, 232, 0.3)' }}>
+                  <Award className="w-7 h-7" style={{ color: '#66C5D6' }} />
+                </div>
+                <div className="flex-1">
+                  <div className="text-lg font-semibold text-gray-900 sans mb-2">Beste AI-modellen</div>
+                  <div className="text-base text-gray-600 sans font-light leading-relaxed">Google Gemini en Microsoft Copilot (Claude + GPT-4) zijn de krachtigste modellen beschikbaar vandaag.</div>
                 </div>
               </div>
             </div>
