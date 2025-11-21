@@ -148,10 +148,20 @@ export default function CribConnectsOnePager() {
 
             {/* Slogan Button */}
             <div className="flex justify-center mb-6 sm:mb-8">
-              <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass-strong border border-cyan-200/50 shadow-md">
+              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full glass-strong border border-cyan-200/50 shadow-md">
                 <span className="text-sm sm:text-base font-semibold sans" style={{ color: '#66C5D6' }}>
                   AI. Ethisch. Verantwoord.
                 </span>
+                <span className="text-gray-300">•</span>
+                <a
+                  href="https://www.cribconnects.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs sm:text-sm font-medium sans hover:underline transition-all"
+                  style={{ color: '#5BC8E8' }}
+                >
+                  cribconnects.com
+                </a>
               </div>
             </div>
 
