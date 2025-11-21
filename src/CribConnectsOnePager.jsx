@@ -146,6 +146,15 @@ export default function CribConnectsOnePager() {
               Van Licenties naar <span style={{ color: '#88D8E8' }}>Cultuur</span>
             </h1>
 
+            {/* Slogan Button */}
+            <div className="flex justify-center mb-6 sm:mb-8">
+              <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full glass-strong border border-cyan-200/50 shadow-md">
+                <span className="text-sm sm:text-base font-semibold sans" style={{ color: '#66C5D6' }}>
+                  AI. Ethisch. Verantwoord.
+                </span>
+              </div>
+            </div>
+
             <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-5 sm:mb-6 sans font-light leading-relaxed max-w-3xl mx-auto px-2">
               Waar veel bedrijven AI software inkopen, zelf bouwen en licenties toekennen, gebeurt bij <strong className="font-semibold text-gray-900">implementatie vrij weinig</strong>.
             </p>
