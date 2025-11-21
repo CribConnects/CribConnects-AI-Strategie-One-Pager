@@ -65,7 +65,7 @@ export default function CribConnectsOnePager() {
       <nav className="fixed top-0 left-0 right-0 glass-strong z-50 border-b border-cyan-200/50 shadow-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-8 py-3 sm:py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
-            <img src="/cribconnects-logo.svg" alt="CribConnects" className="h-10 w-auto" />
+            <img src="/CribConnects-logo.svg" alt="CribConnects" className="h-10 w-auto" />
             <div className="hidden sm:block text-sm md:text-base font-bold serif" style={{ color: '#88D8E8' }}>
               AI Strategie One-Pager
             </div>
@@ -771,7 +771,7 @@ export default function CribConnectsOnePager() {
       <footer className="glass-strong border-t border-cyan-200/50 py-8 sm:py-10 px-4 sm:px-8 mt-16 sm:mt-20">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6">
           <div className="flex items-center gap-3">
-            <img src="/cribconnects-logo.svg" alt="CribConnects" className="h-12 w-auto" />
+            <img src="/CribConnects-logo.svg" alt="CribConnects" className="h-12 w-auto" />
           </div>
           <div className="text-xs sm:text-sm text-gray-600 sans font-light text-center md:text-right">
             <div className="mb-1">Van licenties naar cultuurverandering</div>
