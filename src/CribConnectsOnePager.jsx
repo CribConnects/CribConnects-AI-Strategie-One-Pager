@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Sparkles, Users, Target, Zap, CheckCircle, MessageSquare, Award, Plus, Minus, DollarSign, Wrench, Key, TrendingUp, Brain, Lightbulb, Rocket, Mail, Phone } from 'lucide-react';
+import { ChevronDown, Sparkles, Users, Target, Zap, CheckCircle, MessageSquare, Award, Plus, Minus, DollarSign, Wrench, Key, TrendingUp, Brain, Lightbulb, Rocket, Mail, Phone, Menu, X } from 'lucide-react';
 
 export default function CribConnectsOnePager() {
   const [activeSection, setActiveSection] = useState('hero');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [expanded, setExpanded] = useState({
     hero: false,
     problem1: false,
@@ -62,11 +63,16 @@ export default function CribConnectsOnePager() {
 
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 glass-strong z-50 border-b border-cyan-200/50 shadow-sm">
-        <div className="max-w-6xl mx-auto px-8 py-4 flex justify-between items-center">
-          <div className="text-base font-bold serif" style={{ color: '#88D8E8' }}>
-            CribConnects AI Strategie One-Pager
+        <div className="max-w-6xl mx-auto px-4 sm:px-8 py-3 sm:py-4 flex justify-between items-center">
+          <div className="flex items-center gap-3">
+            <img src="/cribconnects-logo.svg" alt="CribConnects" className="h-10 w-auto" />
+            <div className="hidden sm:block text-sm md:text-base font-bold serif" style={{ color: '#88D8E8' }}>
+              AI Strategie One-Pager
+            </div>
           </div>
-          <div className="flex gap-8 text-xs font-medium tracking-wide uppercase sans">
+
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex gap-6 lg:gap-8 text-xs font-medium tracking-wide uppercase sans">
             {[
               { id: 'hero', label: 'Home' },
               { id: 'probleem', label: 'Probleem' },
@@ -86,38 +92,80 @@ export default function CribConnectsOnePager() {
               </button>
             ))}
           </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            className="md:hidden p-2"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6" style={{ color: '#88D8E8' }} />
+            ) : (
+              <Menu className="w-6 h-6" style={{ color: '#88D8E8' }} />
+            )}
+          </button>
+        </div>
+
+        {/* Mobile Navigation Menu */}
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ${
+          mobileMenuOpen ? 'max-h-96' : 'max-h-0'
+        }`}>
+          <div className="px-4 py-4 space-y-3 border-t border-cyan-200/50 bg-white/95">
+            {[
+              { id: 'hero', label: 'Home' },
+              { id: 'probleem', label: 'Probleem' },
+              { id: 'strategie', label: 'Strategie' },
+              { id: 'tooling', label: 'Tooling' },
+              { id: 'aanpak', label: 'Aanpak' }
+            ].map(({ id, label }) => (
+              <button
+                key={id}
+                onClick={() => {
+                  scrollTo(id);
+                  setMobileMenuOpen(false);
+                }}
+                className={`block w-full text-left px-4 py-2 rounded-lg transition-all text-sm font-medium sans ${
+                  activeSection === id ? 'font-semibold' : 'text-gray-600 hover:text-gray-900'
+                }`}
+                style={activeSection === id ? { color: '#88D8E8', background: 'rgba(136, 216, 232, 0.1)' } : {}}
+              >
+                {label}
+              </button>
+            ))}
+          </div>
         </div>
       </nav>
 
       {/* Hero */}
-      <section id="hero" className="pt-32 pb-20 px-8">
+      <section id="hero" className="pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 sm:px-8">
         <div className="max-w-4xl mx-auto">
           {/* Main Title Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl md:text-6xl font-bold mb-8 text-gray-900 serif leading-tight">
+          <div className="text-center mb-12 sm:mb-16">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 sm:mb-8 text-gray-900 serif leading-tight px-2">
               Van Licenties naar <span style={{ color: '#88D8E8' }}>Cultuur</span>
             </h1>
 
-            <p className="text-xl text-gray-700 mb-6 sans font-light leading-relaxed max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-700 mb-5 sm:mb-6 sans font-light leading-relaxed max-w-3xl mx-auto px-2">
               Waar veel bedrijven AI software inkopen, zelf bouwen en licenties toekennen, gebeurt bij <strong className="font-semibold text-gray-900">implementatie vrij weinig</strong>.
             </p>
 
-            <p className="text-lg text-gray-600 mb-10 sans font-light leading-relaxed max-w-3xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-8 sm:mb-10 sans font-light leading-relaxed max-w-3xl mx-auto px-2">
               Wij zien AI als een <strong className="font-semibold text-gray-900">kans</strong> om je workforce te moderniseren en een <strong className="font-semibold text-gray-900">cultuurverandering</strong> te bewerkstelligen.
               Door <strong className="font-semibold text-gray-900">praktische coaching op de werkvloer</strong> zorgen we voor echte adoptie.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
               <button
                 onClick={() => scrollTo('aanpak')}
-                className="px-8 py-4 text-white rounded-xl font-medium hover:shadow-lg transition-all sans text-base shadow-md"
+                className="px-6 sm:px-8 py-3 sm:py-4 text-white rounded-xl font-medium hover:shadow-lg transition-all sans text-sm sm:text-base shadow-md"
                 style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}
               >
                 Bekijk Onze Aanpak
               </button>
               <button
                 onClick={() => scrollTo('probleem')}
-                className="px-8 py-4 glass text-gray-700 rounded-xl font-medium hover:glass-strong transition-all border border-cyan-200/50 sans text-base"
+                className="px-6 sm:px-8 py-3 sm:py-4 glass text-gray-700 rounded-xl font-medium hover:glass-strong transition-all border border-cyan-200/50 sans text-sm sm:text-base"
               >
                 Het Probleem
               </button>
@@ -186,11 +234,11 @@ export default function CribConnectsOnePager() {
       <div className="gradient-line max-w-6xl mx-auto mb-12"></div>
 
       {/* Probleem */}
-      <section id="probleem" className="py-16 px-8">
+      <section id="probleem" className="py-12 sm:py-16 px-4 sm:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-gray-900 serif">Het Probleem</h2>
-            <p className="text-lg text-gray-600 sans font-light">
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 serif px-2">Het Probleem</h2>
+            <p className="text-base sm:text-lg text-gray-600 sans font-light px-2">
               Waarom <strong className="font-semibold text-gray-900">AI-investeringen</strong> vaak niet renderen en adoptie laag blijft
             </p>
           </div>
@@ -268,11 +316,11 @@ export default function CribConnectsOnePager() {
       <div className="gradient-line max-w-6xl mx-auto my-12"></div>
 
       {/* Strategie */}
-      <section id="strategie" className="py-16 px-8">
+      <section id="strategie" className="py-12 sm:py-16 px-4 sm:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-gray-900 serif">Onze Strategie</h2>
-            <p className="text-lg text-gray-600 sans font-light">
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 serif px-2">Onze Strategie</h2>
+            <p className="text-base sm:text-lg text-gray-600 sans font-light px-2">
               AI als <strong className="font-semibold text-gray-900">katalysator</strong> voor organisatieverandering en workforce modernisering
             </p>
           </div>
@@ -426,11 +474,11 @@ export default function CribConnectsOnePager() {
       <div className="gradient-line max-w-6xl mx-auto my-12"></div>
 
       {/* Tooling */}
-      <section id="tooling" className="py-16 px-8">
+      <section id="tooling" className="py-12 sm:py-16 px-4 sm:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-gray-900 serif">Welke Tooling?</h2>
-            <p className="text-lg text-gray-600 sans font-light">
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 serif px-2">Welke Tooling?</h2>
+            <p className="text-base sm:text-lg text-gray-600 sans font-light px-2">
               We zetten in op <strong className="font-semibold text-gray-900">Google Gemini</strong> of <strong className="font-semibold text-gray-900">Microsoft Copilot</strong>: enterprise-ready platforms met volledige compliance
             </p>
           </div>
@@ -590,11 +638,11 @@ export default function CribConnectsOnePager() {
       <div className="gradient-line max-w-6xl mx-auto my-12"></div>
 
       {/* Aanpak */}
-      <section id="aanpak" className="py-16 px-8">
+      <section id="aanpak" className="py-12 sm:py-16 px-4 sm:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-gray-900 serif">Onze Aanpak</h2>
-            <p className="text-lg text-gray-600 sans font-light">
+          <div className="text-center mb-10 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-gray-900 serif px-2">Onze Aanpak</h2>
+            <p className="text-base sm:text-lg text-gray-600 sans font-light px-2">
               <strong className="font-semibold text-gray-900">Custom-made</strong> implementatie in 4 fases: van enthousiasme naar resultaten
             </p>
           </div>
@@ -671,28 +719,28 @@ export default function CribConnectsOnePager() {
             ))}
           </div>
 
-          <div className="mt-12 glass-strong rounded-3xl p-10 text-center border border-cyan-200/50 shadow-2xl" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.1) 0%, rgba(255, 255, 255, 0.95) 100%)' }}>
+          <div className="mt-10 sm:mt-12 glass-strong rounded-2xl sm:rounded-3xl p-6 sm:p-10 text-center border border-cyan-200/50 shadow-2xl" style={{ background: 'linear-gradient(135deg, rgba(136, 216, 232, 0.1) 0%, rgba(255, 255, 255, 0.95) 100%)' }}>
             <div className="max-w-3xl mx-auto">
-              <div className="w-20 h-20 rounded-3xl flex items-center justify-center mx-auto mb-6 shadow-xl" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
-                <Rocket className="w-10 h-10 text-white" />
+              <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-5 sm:mb-6 shadow-xl" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
+                <Rocket className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
               </div>
-              <h3 className="text-3xl font-bold serif mb-4 text-gray-900">Klaar om te Beginnen?</h3>
-              <p className="text-base font-light mb-8 text-gray-700 sans leading-relaxed">
+              <h3 className="text-2xl sm:text-3xl font-bold serif mb-3 sm:mb-4 text-gray-900 px-2">Klaar om te Beginnen?</h3>
+              <p className="text-sm sm:text-base font-light mb-6 sm:mb-8 text-gray-700 sans leading-relaxed px-2">
                 Laten we samen jouw <strong className="font-medium">AI-transformatie</strong> realiseren.
                 Met <strong className="font-medium">praktische coaching</strong> en <strong className="font-medium">meetbare resultaten</strong> gaan we van licenties naar <strong className="font-medium">cultuurverandering</strong>.
               </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+              <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center px-2">
                 <a href="mailto:info@cribconnects.com" className="flex items-center gap-3 text-gray-700 hover:text-gray-900 transition-all group">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
-                    <Mail className="w-6 h-6 text-white" />
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
+                    <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <span className="text-base font-medium sans">info@cribconnects.com</span>
+                  <span className="text-sm sm:text-base font-medium sans">info@cribconnects.com</span>
                 </a>
                 <a href="tel:+31639611117" className="flex items-center gap-3 text-gray-700 hover:text-gray-900 transition-all group">
-                  <div className="w-12 h-12 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
-                    <Phone className="w-6 h-6 text-white" />
+                  <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shadow-md group-hover:shadow-lg transition-all" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
-                  <span className="text-base font-medium sans">+31 6 396 111 17</span>
+                  <span className="text-sm sm:text-base font-medium sans">+31 6 396 111 17</span>
                 </a>
               </div>
             </div>
@@ -701,17 +749,12 @@ export default function CribConnectsOnePager() {
       </section>
 
       {/* Footer */}
-      <footer className="glass-strong border-t border-cyan-200/50 py-10 px-8 mt-20">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+      <footer className="glass-strong border-t border-cyan-200/50 py-8 sm:py-10 px-4 sm:px-8 mt-16 sm:mt-20">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center shadow-md" style={{ background: 'linear-gradient(135deg, #88D8E8 0%, #66C5D6 100%)' }}>
-              <Sparkles className="w-5 h-5 text-white" />
-            </div>
-            <div className="text-xl font-bold serif" style={{ color: '#88D8E8' }}>
-              CribConnects
-            </div>
+            <img src="/cribconnects-logo.svg" alt="CribConnects" className="h-12 w-auto" />
           </div>
-          <div className="text-sm text-gray-600 sans font-light text-center md:text-right">
+          <div className="text-xs sm:text-sm text-gray-600 sans font-light text-center md:text-right">
             <div className="mb-1">Van licenties naar cultuurverandering</div>
             <div className="text-xs text-gray-500">Praktische AI-coaching voor echte resultaten • Amsterdam</div>
           </div>
