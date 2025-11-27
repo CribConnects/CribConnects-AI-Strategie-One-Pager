@@ -1,0 +1,19 @@
+<svg width="300" height="120" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+  <!-- CPI Text -->
+  <text x="10" y="80" font-family="Arial, sans-serif" font-size="60" font-weight="900" fill="#8BC53F">CPI</text>
+
+  <!-- RISK FINANCE GOVERNANCE Text -->
+  <text x="10" y="95" font-family="Arial, sans-serif" font-size="8" font-weight="700" fill="#1a1a1a">RISK FINANCE</text>
+  <text x="10" y="105" font-family="Arial, sans-serif" font-size="8" font-weight="700" fill="#1a1a1a">GOVERNANCE</text>
+
+  <!-- Swan icon -->
+  <g transform="translate(180, 20)">
+    <!-- Swan body - green curves -->
+    <path d="M 40 40 Q 60 20, 80 15 Q 90 12, 95 20 Q 100 30, 90 45" fill="none" stroke="#8BC53F" stroke-width="8"/>
+    <path d="M 30 50 Q 45 35, 60 30 Q 70 28, 75 35" fill="none" stroke="#8BC53F" stroke-width="6"/>
+
+    <!-- Swan head - black -->
+    <ellipse cx="95" cy="18" rx="8" ry="10" fill="#1a1a1a"/>
+    <path d="M 90 20 Q 85 15, 88 10" fill="none" stroke="#1a1a1a" stroke-width="3"/>
+  </g>
+</svg>
