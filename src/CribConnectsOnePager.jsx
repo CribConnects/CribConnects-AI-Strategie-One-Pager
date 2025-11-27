@@ -51,7 +51,7 @@ export default function CribConnectsOnePager() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-white via-green-50/30 to-emerald-50/40">
+    <div className="min-h-screen bg-gradient-to-br from-white via-green-50/30 to-emerald-50/40 relative overflow-hidden">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
         .serif { font-family: 'Libre Baskerville', serif; }
@@ -59,7 +59,77 @@ export default function CribConnectsOnePager() {
         .gradient-line { background: linear-gradient(90deg, #8BC53F 0%, transparent 100%); height: 2px; }
         .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(20px); }
         .glass-strong { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(30px); }
+
+        /* Subtiele achtergrondpatronen voor vertrouwen */
+        .bg-pattern {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          z-index: 0;
+          opacity: 0.03;
+        }
+
+        .floating-shape {
+          position: absolute;
+          border-radius: 50%;
+          background: linear-gradient(135deg, #8BC53F 0%, #7AB82F 100%);
+          filter: blur(60px);
+          opacity: 0.1;
+          animation: float 20s ease-in-out infinite;
+        }
+
+        .shape-1 {
+          width: 400px;
+          height: 400px;
+          top: 10%;
+          right: 10%;
+          animation-delay: 0s;
+        }
+
+        .shape-2 {
+          width: 300px;
+          height: 300px;
+          bottom: 20%;
+          left: 5%;
+          animation-delay: 5s;
+        }
+
+        .shape-3 {
+          width: 350px;
+          height: 350px;
+          top: 50%;
+          left: 40%;
+          animation-delay: 10s;
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translate(0, 0) scale(1); }
+          33% { transform: translate(30px, -30px) scale(1.1); }
+          66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
       `}</style>
+
+      {/* Subtiele achtergrond sfeerbeelden */}
+      <div className="bg-pattern">
+        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <circle cx="20" cy="20" r="1" fill="#8BC53F" opacity="0.5"/>
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
+      </div>
+
+      {/* Zwevende vormen voor diepte en vertrouwen */}
+      <div className="floating-shape shape-1"></div>
+      <div className="floating-shape shape-2"></div>
+      <div className="floating-shape shape-3"></div>
+
+      <div className="relative z-10">{/* Content wrapper */}
 
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 glass-strong z-50 border-b border-green-200/50 shadow-sm">
@@ -781,6 +851,7 @@ export default function CribConnectsOnePager() {
           </div>
         </div>
       </footer>
+      </div>{/* End content wrapper */}
     </div>
   );
 }
